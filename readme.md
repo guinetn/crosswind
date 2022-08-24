@@ -20,14 +20,14 @@ Press F5
 
 # TRANSLATIONS
 
-Runway = Runway heading / Axe de piste
-WFrom = Wind from / vent du
-WSpeed = At / A
-CW = Crosswind / Vent Travers
-HW = Headwind / Vent Face
-WArriere = tailwind / vent arrière
-WFace = headwind / vent de face
-Droite = from the right / de la droite
-Gauche = from the left / de la gauche
-Langage = language / language
-windsock = windsock / manche a air
+	Runway = Runway heading / Axe de piste
+	WFrom = Wind from / vent du
+	WSpeed = At / A
+	CW = Crosswind / Vent Travers
+	HW = Headwind / Vent Face
+	WArriere = tailwind / vent arrière
+	WFace = headwind / vent de face
+	Droite = from the right / de la droite
+	Gauche = from the left / de la gauche
+	Langage = language / language
+	windsock = windsock / manche a air
