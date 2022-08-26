@@ -695,13 +695,13 @@ namespace CrossWind
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Save Datas in Registry
-            Application.CommonAppDataRegistry.SetValue("Cap", Cap);
-            Application.CommonAppDataRegistry.SetValue("Windx", (int)VentPt.X);
-            Application.CommonAppDataRegistry.SetValue("Windy", (int)VentPt.Y);
-            Application.CommonAppDataRegistry.SetValue("Zoom", (int)sb_CompassScale.Value);
-            Application.CommonAppDataRegistry.SetValue("Left", Left);
-            Application.CommonAppDataRegistry.SetValue("Top", Top);
-            Application.CommonAppDataRegistry.SetValue("Culture", cultInfo.Name);
+            Application.UserAppDataRegistry.SetValue("Cap", Cap);
+            Application.UserAppDataRegistry.SetValue("Windx", (int)VentPt.X);
+            Application.UserAppDataRegistry.SetValue("Windy", (int)VentPt.Y);
+            Application.UserAppDataRegistry.SetValue("Zoom", (int)sb_CompassScale.Value);
+            Application.UserAppDataRegistry.SetValue("Left", Left);
+            Application.UserAppDataRegistry.SetValue("Top", Top);
+            Application.UserAppDataRegistry.SetValue("Culture", cultInfo.Name);
         }
 
         private void main_Load(object sender, EventArgs e)
@@ -709,14 +709,14 @@ namespace CrossWind
             // Read Datas in Registry
             try
             {
-                Cap = (int)Application.CommonAppDataRegistry.GetValue("Cap");
-                sb_CompassScale.Value = (double) ((int)Application.CommonAppDataRegistry.GetValue("Zoom"));
-                VentPt.X = (float)((int)Application.CommonAppDataRegistry.GetValue("Windx", 0));
-                VentPt.Y = (float)((int)Application.CommonAppDataRegistry.GetValue("Windy", 0));
+                Cap = (int)Application.UserAppDataRegistry.GetValue("Cap",0);
+                sb_CompassScale.Value = (double) ((int)Application.UserAppDataRegistry.GetValue("Zoom",0));
+                VentPt.X = (float)((int)Application.UserAppDataRegistry.GetValue("Windx", 0));
+                VentPt.Y = (float)((int)Application.UserAppDataRegistry.GetValue("Windy", 0));
 
-                Left = (int)Application.CommonAppDataRegistry.GetValue("Left", 0);
-                Top = (int)Application.CommonAppDataRegistry.GetValue("Top", 0);
-                cultInfo = new CultureInfo((string)Application.CommonAppDataRegistry.GetValue("Culture", ""));
+                Left = (int)Application.UserAppDataRegistry.GetValue("Left", 0);
+                Top = (int)Application.UserAppDataRegistry.GetValue("Top", 0);
+                cultInfo = new CultureInfo((string)Application.UserAppDataRegistry.GetValue("Culture", ""));
 
                 ChangeLanguage();
             }
