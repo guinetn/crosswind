@@ -25,7 +25,7 @@ Press F5
 	WSpeed = At / A
 	CW = Crosswind / Vent Travers
 	HW = Headwind / Vent Face
-	WArriere = tailwind / vent arrière
+	WArriere = tailwind / vent arriÃ¨re
 	WFace = headwind / vent de face
 	Droite = from the right / de la droite
 	Gauche = from the left / de la gauche
